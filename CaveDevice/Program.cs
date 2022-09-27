@@ -17,7 +17,7 @@ using Newtonsoft.Json;
         // Note: in real-world applications you would not "hard-code" the connection string
         // It could be stored within an environment variable, passed in via the command-line or
         // stored securely within a TPM module.
-        private readonly static string connectionString = "HostName=iot-az220-training-as081276.azure-devices.net;DeviceId=sensor-th-1001;SharedAccessKey=lGrV+bI+6xabA+c/YbWdlFfZE4ym4g7lillFIek/2xU=";
+        private readonly static string connectionString = "HostName=iot-az220-training-asf081276.azure-devices.net;DeviceId=sensor-th-0001;SharedAccessKey=+0DIbnWJYidiQFu4NCQxpxAFawVSe53jBlwpozA0cMo=";
          
          // INSERT Main method below here
           private static void Main(string[] args)
