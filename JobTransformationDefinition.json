@@ -1,0 +1,9 @@
+{
+    "name":"VibrationJobTransformation",
+    "type":"Microsoft.StreamAnalytics/streamingjobs/transformations",
+    "properties":{
+        "streamingUnits":1,
+        "script":null,
+        "query":" SELECT * INTO vibrationOutput FROM vibrationInput"
+    }
+}

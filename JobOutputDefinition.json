@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "datasource": {
+      "type": "Microsoft.Storage/Blob",
+      "properties": {
+        "storageAccounts": [
+          {
+            "accountName": "vibrationstoredm20200803",
+            "accountKey": "3g13NwTMjUju2dlh7FkST389ik9idwvknJ30yKUKwHKrNCgju4ZgRnw/sEMDmIQ0y44C4RtLdFI1N2heRlinVA=="
+          }
+        ],
+        "container": "vibrationcontainer",
+        "pathPattern": "output/",
+        "dateFormat": "yyyy/MM/dd",
+        "timeFormat": "HH"
+      }
+    },
+    "serialization": {
+      "type": "Json",
+      "properties": {
+        "encoding": "UTF8",
+        "format": "LineSeparated"
+      }
+    }
+  },
+  "name": "BlobOutput",
+  "type": "Microsoft.StreamAnalytics/streamingjobs/outputs"
+}

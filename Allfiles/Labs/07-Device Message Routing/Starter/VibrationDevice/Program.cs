@@ -23,7 +23,7 @@ namespace VibrationDevice
         private static DeviceClient deviceClient;
 
         // The device connection string to authenticate the device with your IoT hub.
-        private readonly static string deviceConnectionString = "HostName=iot-az220-training-asf081276b.azure-devices.net;DeviceId=sensor-v-3000;SharedAccessKey=roNcGwbI4RsW6O6lLcO47lw+HjH0QMXXjAWJZUG/P3M=";
+        private readonly static string deviceConnectionString = "HostName=iot-az220-training-asf081276b.azure-devices.net;DeviceId=sensor-v-3000;SharedAccessKey=2po7+M4vfoTZEZUZfeEErmcUVDP+JdgW62kFf9aCKqA=";
 
         private static void Main(string[] args)
         {
@@ -54,11 +54,11 @@ namespace VibrationDevice
             {
                 var vibration = conveyor.ReadVibration();
 
-                await CreateTelemetryMessage(conveyor, vibration);
+                await CreateTelemetryMessage(conveyor, vibration); //await
 
-                await CreateLoggingMessage(conveyor, vibration);
+                await CreateLoggingMessage(conveyor, vibration); //await
 
-                await Task.Delay(intervalInMilliseconds);
+                await Task.Delay(intervalInMilliseconds); //await
             }
         }
 
@@ -91,7 +91,7 @@ namespace VibrationDevice
             Console.WriteLine($"Telemetry data: {telemetryMessageString}");
 
             // Send the telemetry message.
-            await deviceClient.SendEventAsync(telemetryMessage);
+            await deviceClient.SendEventAsync(telemetryMessage); //await
             ConsoleHelper.WriteGreenMessage($"Telemetry sent {DateTime.Now.ToShortTimeString()}");
         }
 
@@ -128,7 +128,7 @@ namespace VibrationDevice
             Console.WriteLine($"Log data: {loggingMessageString}");
 
             // Send the logging message.
-            await deviceClient.SendEventAsync(loggingMessage);
+            await deviceClient.SendEventAsync(loggingMessage); //await
             ConsoleHelper.WriteGreenMessage("Log data sent\n");
         }
     }

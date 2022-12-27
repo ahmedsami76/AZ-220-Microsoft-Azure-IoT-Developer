@@ -18,7 +18,7 @@ namespace VibrationDevice
         private static DeviceClient deviceClient;
 
         // The device connection string to authenticate the device with your IoT hub.
-        private readonly static string deviceConnectionString = "<your device connection string>";
+        private readonly static string deviceConnectionString = "HostName=iot-az220-training-asf081276b.azure-devices.net;DeviceId=sensor-v-3000;SharedAccessKey=roNcGwbI4RsW6O6lLcO47lw+HjH0QMXXjAWJZUG/P3M=>";
 
         private static void Main(string[] args)
         {

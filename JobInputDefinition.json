@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "type": "Stream",
+    "datasource": {
+      "type": "Microsoft.Devices/IotHubs",
+      "properties": {
+        "iotHubNamespace": "iot-az220-training-dm20200803",
+        "sharedAccessPolicyName": "iothubowner",
+        "sharedAccessPolicyKey": "accesspolicykey",
+        "endpoint": "messages/events",
+        "consumerGroupName": "$Default"
+      }
+    },
+    "compression": {
+      "type": "None"
+    },
+    "serialization": {
+      "type": "Json",
+      "properties": {
+        "encoding": "UTF8"
+      }
+    }
+  },
+  "name": "vibrationInput",
+  "type": "Microsoft.StreamAnalytics/streamingjobs/inputs"
+}
